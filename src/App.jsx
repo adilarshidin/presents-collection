@@ -7,7 +7,7 @@ import horseTwo from './assets/horse2.png';
 const App = () => {
   const mainStyles = {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
