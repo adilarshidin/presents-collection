@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 const Services = () => {
   const Container = styled.div`
-    margin: 0 3% 0 3%;
+    margin: 3%;
     padding: 3%;
     display: flex;
     flex-direction: column;

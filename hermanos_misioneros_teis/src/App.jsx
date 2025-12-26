@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 import Header from "./components/Header";
 import ViewsRouter from "./ViewsRouter";
+import Footer from "./components/Footer";
 
 const App = () => {
   const Container = styled.div`
@@ -14,6 +15,7 @@ const App = () => {
     <Container>
       <Header />
       <ViewsRouter />
+      <Footer />
     </Container>
   );
 };

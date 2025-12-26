@@ -3,9 +3,12 @@ import { Link } from "react-router";
 
 const Nav = () => {
   const StyledNav = styled.nav`
+    display: flex;
+    justify-content: space-around;
+
     position: relative;
     width: 70%;
-    bottom: 35px;
+    bottom: 50px;
 
     background: rgb(1,50,32);
     background: linear-gradient(159deg, rgba(1,50,32,1) 0%, rgba(57,255,20,1) 100%);
@@ -15,7 +18,7 @@ const Nav = () => {
   `;
 
   const StyledLink = styled(Link)`
-    padding: 3%;
+    padding: 1%;
 
     text-decoration: none;
     color: white;
@@ -31,6 +34,7 @@ const Nav = () => {
       <StyledLink to="/services">Servicios</StyledLink>
       <StyledLink to="/philosophy">Filosofía</StyledLink>
       <StyledLink to="/address">Dirección y contactos</StyledLink>
+      <StyledLink to="/publications">Publicaciones</StyledLink>
     </StyledNav>
   );
 };
