@@ -7,6 +7,7 @@ import thirdChurchImage from "../assets/7.webp";
 import fourthChurchImage from "../assets/8.webp";
 import fifthChurchImage from "../assets/9.webp";
 import SEO from "./SEO";
+import { Link } from "react-router";
 
 const images = [
   firstChurchImage,
@@ -130,9 +131,10 @@ const Home = () => {
             <br />
             Mateo 18:20
             <br />
-            <CTAButton href="/services"
-              title="Ir a los servicios parroquiales"
+            <Link to="/services">
+            <CTAButton title="Ir a los servicios parroquiales"
               aria-label="Ver la página de servicios de la parroquia">Ver Servicios</CTAButton>
+            </Link>
           </H1>
         </ImageContainer>
       </Wrapper>
