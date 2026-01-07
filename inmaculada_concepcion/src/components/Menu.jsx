@@ -11,7 +11,7 @@ const StyledMenu = styled.nav`
   background: rgba(0, 0, 0, ${({ $scrolled }) => ($scrolled ? 0.75 : 0.9)});
   backdrop-filter: blur(6px);
   transition: background 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 `;
 
 const MenuInner = styled.div`
@@ -77,7 +77,9 @@ const HorariosBadge = styled(Link)`
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
 
   &:hover {
     background: #e5d8b0;
@@ -110,11 +112,11 @@ const MobileLink = styled(NavLink)`
   padding: 1rem 2rem;
   color: #fefbf5;
   text-decoration: none;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 
   &.active {
     color: #bfa34a;
-    background: rgba(191,163,74,0.12);
+    background: rgba(191, 163, 74, 0.12);
   }
 `;
 
@@ -153,7 +155,9 @@ const Menu = () => {
         </a>
 
         <DesktopLinks>
-          <MenuLink to="/" end>Inicio</MenuLink>
+          <MenuLink to="/" end>
+            Inicio
+          </MenuLink>
           <MenuLink to="/about">La Iglesia</MenuLink>
           <MenuLink to="/services">Servicios parroquiales</MenuLink>
 
@@ -168,9 +172,15 @@ const Menu = () => {
       </MenuInner>
 
       <MobileMenu $open={open}>
-        <MobileLink to="/" end onClick={() => setOpen(false)}>Inicio</MobileLink>
-        <MobileLink to="/about" onClick={() => setOpen(false)}>La Iglesia</MobileLink>
-        <MobileLink to="/services" onClick={() => setOpen(false)}>Servicios parroquiales</MobileLink>
+        <MobileLink to="/" end onClick={() => setOpen(false)}>
+          Inicio
+        </MobileLink>
+        <MobileLink to="/about" onClick={() => setOpen(false)}>
+          La Iglesia
+        </MobileLink>
+        <MobileLink to="/services" onClick={() => setOpen(false)}>
+          Servicios parroquiales
+        </MobileLink>
 
         <MobileHorarios to="/about#horarios" onClick={() => setOpen(false)}>
           <FaClock /> Horarios de Misas

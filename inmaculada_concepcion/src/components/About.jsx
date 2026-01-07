@@ -24,7 +24,7 @@ const Image = styled.img`
   max-width: 600px;
   aspect-ratio: 3 / 2;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   object-fit: cover;
 `;
 
@@ -33,8 +33,12 @@ const Section = styled.div`
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  background: linear-gradient(to bottom right, rgba(191,163,74,0.95), rgba(191,163,74,0.75));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(
+    to bottom right,
+    rgba(191, 163, 74, 0.95),
+    rgba(191, 163, 74, 0.75)
+  );
 `;
 
 const TextWrapper = styled.div`
@@ -63,7 +67,7 @@ const MapWrapper = styled.div`
   padding: 3%;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 
   iframe {
     width: 100%;
@@ -94,26 +98,57 @@ const About = () => (
     <ViewWrapper>
       <h1>Parroquia de la Inmaculada Concepción</h1>
       <ImageBlock>
-        <Image src={tabletImage} loading="lazy" alt="Interior de la Iglesia de la Inmaculada Concepción en Vigo" />
-        <Image src={confessionBoothImage} loading="lazy" alt="Confesionario de la Iglesia de la Inmaculada Concepción en Vigo" />
+        <Image
+          src={tabletImage}
+          loading="lazy"
+          alt="Interior de la Iglesia de la Inmaculada Concepción en Vigo"
+        />
+        <Image
+          src={confessionBoothImage}
+          loading="lazy"
+          alt="Confesionario de la Iglesia de la Inmaculada Concepción en Vigo"
+        />
       </ImageBlock>
 
       <Section>
         <h2>Historia y arquitectura</h2>
-        <p><strong>Arquitecto:</strong> Antonio Román Conde</p>
-        <p><strong>Año:</strong> 1968</p>
-        <p><strong>Localización:</strong> Calle del Cronista J. Espinosa</p>
-        <p>Esta iglesia, situada en el popular barrio del Calvario, sigue una línea arquitectónica inspirada en Le Corbusier.</p>
+        <p>
+          <strong>Arquitecto:</strong> Antonio Román Conde
+        </p>
+        <p>
+          <strong>Año:</strong> 1968
+        </p>
+        <p>
+          <strong>Localización:</strong> Calle del Cronista J. Espinosa
+        </p>
+        <p>
+          Esta iglesia, situada en el popular barrio del Calvario, sigue una
+          línea arquitectónica inspirada en Le Corbusier.
+        </p>
       </Section>
 
       <Section>
         <h2>Contacto</h2>
-        <p><strong>Párroco:</strong> D. Miguel Ángel Castro Quinteiro</p>
-        <TextWrapper><IconCircle><FaPhone /></IconCircle><StyledLink href="tel:986274622">986274622</StyledLink></TextWrapper>
-        <TextWrapper><IconCircle><IoMailSharp /></IconCircle><StyledLink href="mailto:vigo.inmaculada@diocesetuivigo.org">vigo.inmaculada@diocesetuivigo.org</StyledLink></TextWrapper>
+        <p>
+          <strong>Párroco:</strong> D. Miguel Ángel Castro Quinteiro
+        </p>
+        <TextWrapper>
+          <IconCircle>
+            <FaPhone />
+          </IconCircle>
+          <StyledLink href="tel:986274622">986274622</StyledLink>
+        </TextWrapper>
+        <TextWrapper>
+          <IconCircle>
+            <IoMailSharp />
+          </IconCircle>
+          <StyledLink href="mailto:vigo.inmaculada@diocesetuivigo.org">
+            vigo.inmaculada@diocesetuivigo.org
+          </StyledLink>
+        </TextWrapper>
       </Section>
 
-      <Section id="horarios" style={{ "scrollMarginTop": "25em" }}>
+      <Section id="horarios" style={{ scrollMarginTop: "25em" }}>
         <h2>Horarios de misas</h2>
         <p>Diario: 9:30 y 18:30 horas.</p>
         <p>Sábados: 18:30 y 20:00 horas.</p>
@@ -126,7 +161,12 @@ const About = () => (
       </Section>
 
       <MapWrapper>
-        <TextWrapper><IconCircle><FaLocationDot /></IconCircle><h2>Ubicación</h2></TextWrapper>
+        <TextWrapper>
+          <IconCircle>
+            <FaLocationDot />
+          </IconCircle>
+          <h2>Ubicación</h2>
+        </TextWrapper>
         <iframe
           title="Ubicación de la iglesia"
           src="https://vigo.maps.arcgis.com/apps/webappviewer/index.html?id=95730d02d392425da3fe379a2336ac15&marker=-8.70044231414795,42.23233848882558&level=17"

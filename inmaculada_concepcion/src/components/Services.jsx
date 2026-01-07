@@ -21,7 +21,7 @@ const Card = styled.div`
   background-color: #fefbf5;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 
   &:hover {
@@ -76,21 +76,35 @@ const Services = () => {
         <h1>Servicios</h1>
         <ServicesWrapper>
           <Card>
-            <Image src={eventsImage} loading="lazy" alt="Actividades y celebraciones de la Iglesia de la Inmaculada Concepción en Vigo" />
+            <Image
+              src={eventsImage}
+              loading="lazy"
+              alt="Actividades y celebraciones de la Iglesia de la Inmaculada Concepción en Vigo"
+            />
             <Text>
-              <Heading><FaChurch /> Actividades y celebraciones</Heading>
+              <Heading>
+                <FaChurch /> Actividades y celebraciones
+              </Heading>
               <p>
-                Celebramos festividades cristianas junto a la comunidad y ofrecemos clases de inglés y español para todas las edades.
+                Celebramos festividades cristianas junto a la comunidad y
+                ofrecemos clases de inglés y español para todas las edades.
               </p>
             </Text>
           </Card>
 
           <Card $reverse>
-            <Image src={servicesImage} loading="lazy" alt="Tablón de servicios y anuncios de la Iglesia de la Inmaculada Concepción en Vigo" />
+            <Image
+              src={servicesImage}
+              loading="lazy"
+              alt="Tablón de servicios y anuncios de la Iglesia de la Inmaculada Concepción en Vigo"
+            />
             <Text>
-              <Heading><FaUsers /> Tablón de servicios</Heading>
+              <Heading>
+                <FaUsers /> Tablón de servicios
+              </Heading>
               <p>
-                Publica anuncios de empleo, ofrece servicios profesionales o comparte tus habilidades con la comunidad.
+                Publica anuncios de empleo, ofrece servicios profesionales o
+                comparte tus habilidades con la comunidad.
               </p>
             </Text>
           </Card>

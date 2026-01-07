@@ -28,6 +28,24 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `;
 
+const HeroContent = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  width: min(90%, 720px);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+
+  animation: ${fadeIn} 1s ease-in;
+`;
+
 const ImageContainer = styled.div`
   position: relative;
   width: 100%;
@@ -47,42 +65,48 @@ const Image = styled.img`
 const Overlay = styled.div`
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.2)
+  );
   z-index: 1;
 `;
 
 const H1 = styled.h1`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  z-index: 2;
   color: gold;
-  text-align: center;
   font-family: "Playfair Display", serif;
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
   line-height: 1.4;
-  background: rgba(0, 0, 0, 0.45);
-  border-radius: 8px;
-  padding: 1rem;
-  animation: ${fadeIn} 1s ease-in;
+  margin: 0;
 `;
 
-const CTAButton = styled(Link)`
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 2rem;
+const Blockquote = styled.blockquote`
+  color: #f1e9c6;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+  padding: 1rem;
+  border-radius: 8px;
+`;
+
+const CTAButton = styled.a`
+  margin-top: 0.5rem;
+  padding: 0.75rem 2.2rem;
+
   color: black;
   background-color: gold;
-  border-radius: 25px;
-  font-weight: bold;
+  border-radius: 999px;
+  font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
+
+  transition: transform 0.25s ease, background-color 0.25s ease;
 
   &:hover {
     background-color: #e5d8b0;
-    transform: scale(1.05);
+    transform: translateY(-2px);
   }
 `;
 
@@ -90,13 +114,17 @@ const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.content = "Parroquia de la Inmaculada Concepción | Iglesia en Vigo";
+    const ogTitle = document.querySelector("meta[property='og:title']");
+    if (ogTitle)
+      ogTitle.content =
+        "Parroquia de la Inmaculada Concepción | Iglesia en Vigo";
 
-    const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.content = "Iglesia de la Inmaculada Concepción en Vigo. Comunidad cristiana, celebraciones, actividades y servicios parroquiales.";
+    const ogDesc = document.querySelector("meta[property='og:description']");
+    if (ogDesc)
+      ogDesc.content =
+        "Iglesia de la Inmaculada Concepción en Vigo. Comunidad cristiana, celebraciones, actividades y servicios parroquiales.";
 
-    const twitterCard = document.createElement('meta');
+    const twitterCard = document.createElement("meta");
     twitterCard.name = "twitter:card";
     twitterCard.content = "summary_large_image";
     document.head.appendChild(twitterCard);
@@ -119,22 +147,28 @@ const Home = () => {
       <Wrapper>
         <ImageContainer>
           {images.map((img, index) => (
-            <Image key={img}
+            <Image
+              key={img}
               src={img}
               loading="lazy"
               alt="Iglesia de la Inmaculada Concepción en Vigo"
-              $active={index === currentIndex} />
+              $active={index === currentIndex}
+            />
           ))}
           <Overlay />
-          <H1>
-            “Porque donde están dos o tres congregados en mi nombre, allí estoy yo en medio de ellos.”
-            <br />
-            Mateo 18:20
-            <br />
-            <CTAButton to="/services"
-              title="Ir a los servicios parroquiales"
-              aria-label="Ver la página de servicios de la parroquia">Ver Servicios</CTAButton>
-          </H1>
+          <HeroContent>
+            <H1>Parroquia de la Inmaculada Concepción</H1>
+
+            <Blockquote>
+              “Porque donde están dos o tres congregados en mi nombre, allí estoy yo en medio de ellos.”
+              <br />
+              <small>Mateo 18:20</small>
+            </Blockquote>
+
+            <CTAButton href="/services">
+              Ver Servicios
+            </CTAButton>
+          </HeroContent>
         </ImageContainer>
       </Wrapper>
     </>

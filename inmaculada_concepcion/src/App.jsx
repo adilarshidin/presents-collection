@@ -20,21 +20,21 @@ const App = () => {
     script.innerHTML = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Church",
-      "name": "Parroquia de la Inmaculada Concepción",
-      "address": {
+      name: "Parroquia de la Inmaculada Concepción",
+      address: {
         "@type": "PostalAddress",
-        "streetAddress": "Rúa Toledo, 5",
-        "addressLocality": "Vigo",
-        "postalCode": "36205",
-        "addressCountry": "ES"
+        streetAddress: "Rúa Toledo, 5",
+        addressLocality: "Vigo",
+        postalCode: "36205",
+        addressCountry: "ES",
       },
-      "telephone": "+34 986 27 46 22",
-      "geo": {
+      telephone: "+34 986 27 46 22",
+      geo: {
         "@type": "GeoCoordinates",
-        "latitude": 42.232338,
-        "longitude": -8.700442
+        latitude: 42.232338,
+        longitude: -8.700442,
       },
-      "url": "https://inmaculada.onrender.com/"
+      url: "https://inmaculada.onrender.com/",
     });
 
     document.head.appendChild(script);

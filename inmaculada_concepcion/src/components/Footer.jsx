@@ -2,11 +2,7 @@ import styled from "styled-components";
 import { FaWhatsapp, FaTelegram } from "react-icons/fa";
 
 const StyledFooter = styled.footer`
-  background: linear-gradient(
-    to top,
-    #000,
-    #111
-  );
+  background: linear-gradient(to top, #000, #111);
   color: #ccc;
   padding: 1.5rem 1rem;
 

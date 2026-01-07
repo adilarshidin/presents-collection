@@ -11,7 +11,7 @@ const ScrollToHash = () => {
         element.scrollIntoView({
           behavior: "smooth",
           block: "start",
-          inline: "nearest"
+          inline: "nearest",
         });
       }
     }
