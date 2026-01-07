@@ -75,6 +75,7 @@ const Footer = () => {
 
         <SocialLink
           href="https://www.instagram.com/adil_the_running_man/"
+          target="_blank"
           rel="noopener noreferrer"
           aria-label="Contactar por Instagram"
         >
