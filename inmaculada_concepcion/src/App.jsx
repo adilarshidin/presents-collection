@@ -20,10 +20,10 @@ const App = () => {
     script.innerHTML = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Church",
-      "@id": "https://inmaculada.onrender.com/#church",
+      "@id": "https://inmaculadavigo.es/#church",
       "name": "Parroquia de la Inmaculada Concepción",
-      "url": "https://inmaculada.onrender.com/",
-      "image": "https://inmaculada.onrender.com/assets/1.webp",
+      "url": "https://inmaculadavigo.es/",
+      "image": "https://inmaculadavigo.es/assets/1.webp",
       "telephone": "+34986274622",
       "email": "mailto:vigo.inmaculada@diocesetuivigo.org",
       "foundingDate": "1968",
