@@ -1,10 +1,16 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: "adilarshidin/websites"
   branch: master
+
 media_folder: "content/images"
+
 collections:
   - name: "schedule"
-  - label: "Horarios"
-  - folder: "content/schedule"
-  - create: false
-  - slug: "{{slug}}"
+    label: "Horarios"
+    files:
+      - name: "masses"
+        label: "Misas"
+        file: "content/schedule/masses.md"
+        fields:
+          - { label: "Contenido", name: "body", widget: "markdown" }

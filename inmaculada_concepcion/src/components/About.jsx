@@ -7,7 +7,7 @@ import tabletImage from "../assets/4.webp";
 import confessionBoothImage from "../assets/5.webp";
 import ViewWrapper from "./ViewWrapper";
 import SEO from "./SEO";
-import Horarios from "../content-renderers/Horarios";
+import MassesSchedule from "../content-renderers/MassesSchedule";
 
 const ImageBlock = styled.div`
   display: flex;
@@ -160,7 +160,7 @@ const About = () => (
 
       <Section id="horarios" style={{ scrollMarginTop: "25em" }}>
         <h2>Horarios de misas</h2>
-        <Horarios />
+        <MassesSchedule />
         <br />
         <p>
           Consulta también nuestras{" "}
